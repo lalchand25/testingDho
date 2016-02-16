@@ -1,0 +1,53 @@
+﻿<div class="main_header">
+    <div class="header">
+        <div class="logo_left">
+            <img src="/uploads/@Session["logohome"]" width="153" height="123" />
+        </div>
+        <div class="login_button">
+            <a href="/login/logon">
+                <img src="../../images/login_button.png" /></a> @*    <a href="#">
+                <img src="../../images/login_button.png" /></a>*@</div>
+        <div class="logo_right">
+            <h2>
+                @Html.Raw(Session["HomeName1"])
+            </h2>
+            <h3>
+                @Html.Raw(Session["HomeName2"])
+            </h3>
+        </div>
+        <div class="follow">
+                 <div class="follow_img">
+                <a href="https://facebook.com/DhotGroup" target="_blank">
+                    <img src="../../SiteImages/fb.png" /></a></div>
+                             <div class="follow_img">
+                <a href="https://facebook.com/DhotGroup" target="_blank">
+                    <img src="../../SiteImages/fb.png" /></a></div>
+            <div class="follow_img">
+                <a href="https://facebook.com/DhotGroup" target="_blank">
+                    <img src="../../SiteImages/fb.png" /></a></div>
+            <div class="follow_img">
+                <a href="https://twitter.com/DhotGroup/" target="_blank">
+                    <img src="../../SiteImages/twit.png" /></a></div>
+            <div class="follow_img2">
+                <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+                <div id="SkypeButton_Call_dhotgroup.com_1">
+                    <script type="text/javascript">
+                        Skype.ui({
+                            "name": "call",
+                            "element": "SkypeButton_Call_dhotgroup.com_1",
+                            "participants": ["dhotgroup.com"],
+                            "imageSize": 32
+                        });
+                    </script>
+                </div>
+            </div>
+          <div class="follow_img3">
+                <a href="#" target="_blank">
+                    <img src="../../SiteImages/whatsup.png" /></a></div>
+            
+            @*  <div class="follow_img">
+                <a href="#">
+                    <img src="images/sky.png" /></a></div>*@
+        </div>
+    </div>
+</div>

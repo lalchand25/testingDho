@@ -1,0 +1,49 @@
+﻿@model DhotGroupNew.Models.tb_HomePageServicesDhot
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/profileMasterNew.cshtml";
+
+}
+
+
+
+
+
+@*<script>
+    window.onunload = function () {
+        window.opener.location.href = window.opener.location;
+    }
+
+</script>*@
+
+
+
+<div id="box3">
+    <h1>Create Services
+    </h1>
+    @using (Html.BeginForm("Create", "HomePageService", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    
+    @Html.Partial("comHomePageServiceNew"); 
+    }
+</div>
+
+
+
+
+
+@*<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/ProfileMaster.Master"
+    Inherits="System.Web.Mvc.ViewPage<DhotGroupNew.Models.tb_HomePageServicesDhot>" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+    Create
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div id="box3">
+        <h1>
+            Create Services
+        </h1>
+        <%Html.RenderPartial("comHomePageService"); %>
+    </div>
+</asp:Content>*@
+

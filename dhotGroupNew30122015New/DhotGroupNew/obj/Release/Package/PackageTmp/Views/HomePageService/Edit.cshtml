@@ -1,0 +1,26 @@
+﻿
+
+
+@model DhotGroupNew.Models.tb_HomePageServicesDhot
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/profileMasterNew.cshtml";
+
+}
+
+
+
+
+
+
+
+
+<div id="box3">
+    <h1>Edit Services
+    </h1>
+    @using (Html.BeginForm("Edit", "HomePageService", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.Partial("comHomePageServiceNew");
+    }
+</div>
+

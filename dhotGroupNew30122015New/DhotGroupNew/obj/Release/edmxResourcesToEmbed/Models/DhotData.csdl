@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="plugingaganzModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="plugingaganzEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_UserMasterDhot" EntityType="plugingaganzModel.tb_UserMasterDhot" />
+    <EntitySet Name="tb_emailsDescription" EntityType="plugingaganzModel.tb_emailsDescription" />
+    <EntitySet Name="tb_EnquiryDhot" EntityType="plugingaganzModel.tb_EnquiryDhot" />
+    <EntitySet Name="tb_ImagesDhot" EntityType="plugingaganzModel.tb_ImagesDhot" />
+    <EntitySet Name="tb_ImagesHomeDhot" EntityType="plugingaganzModel.tb_ImagesHomeDhot" />
+    <EntitySet Name="tb_PageDescription" EntityType="plugingaganzModel.tb_PageDescription" />
+    <EntitySet Name="tb_UserHistory" EntityType="plugingaganzModel.tb_UserHistory" />
+    <EntitySet Name="tb_UserMaster" EntityType="plugingaganzModel.tb_UserMaster" />
+    <EntitySet Name="tb_UserTracking" EntityType="plugingaganzModel.tb_UserTracking" />
+    <EntitySet Name="tb_ContactUs" EntityType="plugingaganzModel.tb_ContactUs" />
+    <EntitySet Name="tb_ContactUsDhot" EntityType="plugingaganzModel.tb_ContactUsDhot" />
+    <EntitySet Name="tb_HomePageServicesDhot" EntityType="plugingaganzModel.tb_HomePageServicesDhot" />
+  </EntityContainer>
+  <EntityType Name="tb_UserMasterDhot">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Picture" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="EmailID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="ConfirmPassword" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="ProfileName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="Groupid" Type="Int32" />
+    <Property Name="UserMainCateID" Type="Int32" />
+    <Property Name="UserCateID" Type="Int32" />
+    <Property Name="ConfirmID" Type="Boolean" />
+    <Property Name="ConfirmDate" Type="DateTime" Precision="3" />
+    <Property Name="Terms" Type="Boolean" />
+    <Property Name="IpAddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastLogin" Type="DateTime" Precision="3" />
+    <Property Name="activeStatus" Type="Boolean" />
+    <Property Name="RegisterName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="ClassID" Type="Int32" />
+    <Property Name="ClassName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SectionID" Type="Int32" />
+    <Property Name="SectionName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ClassAssignedID" Type="Int32" />
+    <Property Name="ClassAssignedName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="SectionAssignedID" Type="Int32" />
+    <Property Name="SectionAssignedName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tb_emailsDescription">
+    <Key>
+      <PropertyRef Name="Autoid" />
+    </Key>
+    <Property Type="Int32" Name="Autoid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EmailSubject" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EmailModule_" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SetModuleID" />
+    <Property Type="Int32" Name="GroupId" />
+    <Property Type="String" Name="Remarks" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CreatedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CreationDate" Precision="3" />
+    <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="ModificationDate" Precision="3" />
+    <Property Type="String" Name="DeleteStatus" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DeletedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="DeletionDate" Precision="3" />
+  </EntityType>
+  <EntityType Name="tb_EnquiryDhot">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EmailId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Location" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Comments" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SystemDate" Precision="3" />
+    <Property Type="String" Name="Company" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="UserStatus" />
+    <Property Type="String" Name="EnquiryType" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="filepath" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_ImagesDhot">
+    <Key>
+      <PropertyRef Name="ImageID" />
+    </Key>
+    <Property Type="Int32" Name="ImageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ImagePath" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_ImagesHomeDhot">
+    <Key>
+      <PropertyRef Name="ImageID" />
+    </Key>
+    <Property Type="Int32" Name="ImageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ImagePath" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_PageDescription">
+    <Key>
+      <PropertyRef Name="Pageid" />
+    </Key>
+    <Property Type="Int32" Name="Pageid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PageRefId" />
+    <Property Type="String" Name="PageName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Title" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SetModuleID" />
+  </EntityType>
+  <EntityType Name="tb_UserHistory">
+    <Key>
+      <PropertyRef Name="AutoId" />
+    </Key>
+    <Property Type="Int32" Name="AutoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="TimeStamp" Precision="3" />
+    <Property Type="String" Name="IpAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="UserID" />
+    <Property Type="DateTime" Name="LoginTime" Precision="3" />
+    <Property Type="String" Name="SessionName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Timeout" Precision="3" />
+    <Property Type="Boolean" Name="LogoutStatus" />
+    <Property Type="DateTime" Name="SystemDate" Precision="3" />
+  </EntityType>
+  <EntityType Name="tb_UserMaster">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Type="Int32" Name="UserID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Picture" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EmailID" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UserPassword" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ConfirmPassword" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FirstName" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MiddleName" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ProfileName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="CompanyID" />
+    <Property Type="Int32" Name="Groupid" />
+    <Property Type="Int32" Name="UserMainCateID" />
+    <Property Type="Int32" Name="UserCateID" />
+    <Property Type="Boolean" Name="ConfirmID" />
+    <Property Type="DateTime" Name="ConfirmDate" Precision="3" />
+    <Property Type="Boolean" Name="Terms" />
+    <Property Type="String" Name="IpAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+    <Property Type="DateTime" Name="LastLogin" Precision="3" />
+    <Property Type="Boolean" Name="activeStatus" />
+    <Property Type="String" Name="RegisterName" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ClassID" />
+    <Property Type="String" Name="ClassName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SectionID" />
+    <Property Type="String" Name="SectionName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ClassAssignedID" />
+    <Property Type="String" Name="ClassAssignedName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SectionAssignedID" />
+    <Property Type="String" Name="SectionAssignedName" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_UserTracking">
+    <Key>
+      <PropertyRef Name="AutoID" />
+    </Key>
+    <Property Type="Int32" Name="AutoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Userid" />
+    <Property Type="String" Name="IPaddress" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Pagename" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="VisitDate" Precision="3" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_ContactUs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EmailId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Location" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Comments" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SystemDate" Precision="3" />
+    <Property Type="String" Name="Company" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="UserStatus" />
+  </EntityType>
+  <EntityType Name="tb_ContactUsDhot">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EmailId" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Location" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactNo" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Comments" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="SystemDate" Precision="3" />
+    <Property Type="String" Name="Company" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="UserStatus" />
+    <Property Type="String" Name="EnquiryType" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tb_HomePageServicesDhot">
+    <Key>
+      <PropertyRef Name="AutoID" />
+    </Key>
+    <Property Type="Int32" Name="AutoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Heading" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="urllink" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ImagePath" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="displayorder" />
+  </EntityType>
+</Schema>

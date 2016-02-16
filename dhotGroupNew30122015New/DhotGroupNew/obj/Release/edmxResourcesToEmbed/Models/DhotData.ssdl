@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="plugingaganzModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="plugingaganzModelStoreContainer">
+    <EntitySet Name="tb_ContactUs" EntityType="plugingaganzModel.Store.tb_ContactUs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_ContactUsDhot" EntityType="plugingaganzModel.Store.tb_ContactUsDhot" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_emailsDescription" EntityType="plugingaganzModel.Store.tb_emailsDescription" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_EnquiryDhot" EntityType="plugingaganzModel.Store.tb_EnquiryDhot" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_HomePageServicesDhot" EntityType="plugingaganzModel.Store.tb_HomePageServicesDhot" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_ImagesDhot" EntityType="plugingaganzModel.Store.tb_ImagesDhot" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_ImagesHomeDhot" EntityType="plugingaganzModel.Store.tb_ImagesHomeDhot" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_PageDescription" EntityType="plugingaganzModel.Store.tb_PageDescription" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_UserHistory" EntityType="plugingaganzModel.Store.tb_UserHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_UserMaster" EntityType="plugingaganzModel.Store.tb_UserMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_UserMasterDhot" EntityType="plugingaganzModel.Store.tb_UserMasterDhot" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tb_UserTracking" EntityType="plugingaganzModel.Store.tb_UserTracking" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="tb_ContactUs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="Comments" Type="varchar(max)" />
+    <Property Name="SystemDate" Type="datetime" />
+    <Property Name="Company" Type="varchar" MaxLength="100" />
+    <Property Name="UserStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="tb_ContactUsDhot">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="Comments" Type="varchar(max)" />
+    <Property Name="SystemDate" Type="datetime" />
+    <Property Name="Company" Type="varchar" MaxLength="100" />
+    <Property Name="UserStatus" Type="bit" />
+    <Property Name="EnquiryType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_emailsDescription">
+    <Key>
+      <PropertyRef Name="Autoid" />
+    </Key>
+    <Property Name="Autoid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmailSubject" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="EmailModule " Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="SetModuleID" Type="int" />
+    <Property Name="GroupId" Type="int" />
+    <Property Name="Remarks" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModificationDate" Type="datetime" />
+    <Property Name="DeleteStatus" Type="varchar" MaxLength="1" />
+    <Property Name="DeletedBy" Type="varchar" MaxLength="50" />
+    <Property Name="DeletionDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tb_EnquiryDhot">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="Comments" Type="varchar(max)" />
+    <Property Name="SystemDate" Type="datetime" />
+    <Property Name="Company" Type="varchar" MaxLength="100" />
+    <Property Name="UserStatus" Type="bit" />
+    <Property Name="EnquiryType" Type="varchar" MaxLength="50" />
+    <Property Name="filepath" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tb_HomePageServicesDhot">
+    <Key>
+      <PropertyRef Name="AutoID" />
+    </Key>
+    <Property Name="AutoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Heading" Type="varchar" MaxLength="500" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="urllink" Type="varchar" MaxLength="500" />
+    <Property Name="ImagePath" Type="varchar" MaxLength="250" />
+    <Property Name="displayorder" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_ImagesDhot">
+    <Key>
+      <PropertyRef Name="ImageID" />
+    </Key>
+    <Property Name="ImageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ImagePath" Type="varchar" MaxLength="250" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tb_ImagesHomeDhot">
+    <Key>
+      <PropertyRef Name="ImageID" />
+    </Key>
+    <Property Name="ImageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ImagePath" Type="varchar" MaxLength="250" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tb_PageDescription">
+    <Key>
+      <PropertyRef Name="Pageid" />
+    </Key>
+    <Property Name="Pageid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PageRefId" Type="int" />
+    <Property Name="PageName" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+    <Property Name="SetModuleID" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_UserHistory">
+    <Key>
+      <PropertyRef Name="AutoId" />
+    </Key>
+    <Property Name="AutoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="IpAddress" Type="varchar" MaxLength="50" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="LoginTime" Type="datetime" />
+    <Property Name="SessionName" Type="varchar" MaxLength="50" />
+    <Property Name="Timeout" Type="datetime" />
+    <Property Name="LogoutStatus" Type="bit" />
+    <Property Name="SystemDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tb_UserMaster">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Picture" Type="varchar" MaxLength="250" />
+    <Property Name="EmailID" Type="varchar" MaxLength="50" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="15" />
+    <Property Name="ConfirmPassword" Type="varchar" MaxLength="15" />
+    <Property Name="FirstName" Type="varchar" MaxLength="25" />
+    <Property Name="MiddleName" Type="varchar" MaxLength="25" />
+    <Property Name="LastName" Type="varchar" MaxLength="25" />
+    <Property Name="ProfileName" Type="varchar" MaxLength="50" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyID" Type="int" />
+    <Property Name="Groupid" Type="int" />
+    <Property Name="UserMainCateID" Type="int" />
+    <Property Name="UserCateID" Type="int" />
+    <Property Name="ConfirmID" Type="bit" />
+    <Property Name="ConfirmDate" Type="datetime" />
+    <Property Name="Terms" Type="bit" />
+    <Property Name="IpAddress" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="LastLogin" Type="datetime" />
+    <Property Name="activeStatus" Type="bit" />
+    <Property Name="RegisterName" Type="varchar" MaxLength="500" />
+    <Property Name="ClassID" Type="int" />
+    <Property Name="ClassName" Type="varchar" MaxLength="50" />
+    <Property Name="SectionID" Type="int" />
+    <Property Name="SectionName" Type="varchar" MaxLength="50" />
+    <Property Name="ClassAssignedID" Type="int" />
+    <Property Name="ClassAssignedName" Type="varchar" MaxLength="50" />
+    <Property Name="SectionAssignedID" Type="int" />
+    <Property Name="SectionAssignedName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_UserMasterDhot">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Picture" Type="varchar" MaxLength="250" />
+    <Property Name="EmailID" Type="varchar" MaxLength="50" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="15" />
+    <Property Name="ConfirmPassword" Type="varchar" MaxLength="15" />
+    <Property Name="FirstName" Type="varchar" MaxLength="25" />
+    <Property Name="MiddleName" Type="varchar" MaxLength="25" />
+    <Property Name="LastName" Type="varchar" MaxLength="25" />
+    <Property Name="ProfileName" Type="varchar" MaxLength="50" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyID" Type="int" />
+    <Property Name="Groupid" Type="int" />
+    <Property Name="UserMainCateID" Type="int" />
+    <Property Name="UserCateID" Type="int" />
+    <Property Name="ConfirmID" Type="bit" />
+    <Property Name="ConfirmDate" Type="datetime" />
+    <Property Name="Terms" Type="bit" />
+    <Property Name="IpAddress" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="LastLogin" Type="datetime" />
+    <Property Name="activeStatus" Type="bit" />
+    <Property Name="RegisterName" Type="varchar" MaxLength="500" />
+    <Property Name="ClassID" Type="int" />
+    <Property Name="ClassName" Type="varchar" MaxLength="50" />
+    <Property Name="SectionID" Type="int" />
+    <Property Name="SectionName" Type="varchar" MaxLength="50" />
+    <Property Name="ClassAssignedID" Type="int" />
+    <Property Name="ClassAssignedName" Type="varchar" MaxLength="50" />
+    <Property Name="SectionAssignedID" Type="int" />
+    <Property Name="SectionAssignedName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tb_UserTracking">
+    <Key>
+      <PropertyRef Name="AutoID" />
+    </Key>
+    <Property Name="AutoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Userid" Type="int" />
+    <Property Name="IPaddress" Type="varchar" MaxLength="50" />
+    <Property Name="Pagename" Type="varchar" MaxLength="250" />
+    <Property Name="VisitDate" Type="datetime" />
+    <Property Name="Status" Type="varchar" MaxLength="1" />
+  </EntityType>
+</Schema>

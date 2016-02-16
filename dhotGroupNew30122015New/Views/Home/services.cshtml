@@ -1,0 +1,165 @@
+﻿@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    
+}
+<div class="main_container">
+    <div class="container">
+
+
+        <div id="box1">
+            <h1>
+                @ViewBag.pageTitle
+                @*  About: <span class="style1">Dhot Group of Services Inc.</span>*@
+            </h1>
+            @Html.Raw(ViewBag.PageDesc)
+            @*    <p>
+                Dhot Group of Services Inc. (DGSI) is a group of <strong>certified specialists</strong>
+                of different fields. DGSI refer clients to the best certified specialist who are
+                very professional of there fields and DGSI also give after sales services to the
+                clients. DGSI also do Marketing and Promotions of others products and services.</p>
+            <p>
+                The top most priority of DGSI is to give best service to the client
+                <br>
+                <br>
+            </p>
+            <hr>
+            <img src="images/amrit-dhot.jpg" style="float: left; margin: 12px 10px 0 0;" height="176"
+                width="133">
+            <p>
+                <strong>About me:</strong><br>
+                <br>
+                Myself <strong>Amrit Dhot</strong>, <strong>Managing Director</strong> of <strong>Dhot
+                    Goup of Services Inc</strong>. Having a humble background to become socially
+                involved in community. I have amazed a great fortune through my education and social
+                interests to positively influence the lives of people in need.
+                <br>
+                <br>
+                I did Masters of Commerce, Higher Diploma in Co-operative Management and Advanced
+                Diploma in Web-Centric Computing. Total Work Experience in service industry is more
+                then 14 years. My goal is to give best service to the clients and help the people
+                with honesty.</p>
+            <p>
+                <br>
+                <br>
+            </p>*@
+        </div>
+
+
+        <div id="box2">
+            <h2>
+                SERVICES</h2>
+            <ul>
+                <li><a href="/Enquiry/Enquiry/5">Consulting</a></li>
+                <li><a href="/Enquiry/Enquiry/6">Education &amp; Placement</a></li>
+                <li><a href="http://amritdhot.acndirect.com/default.asp"><strong>Essential Home Services</strong></a></li>
+                <li><a href="/Enquiry/Enquiry/7">Financial</a></li>
+                <li><a href="/Enquiry/Enquiry/8">Media</a></li>
+                <li><a href="/Enquiry/EnquiryRealEstate/9">Real Estate</a></li>
+                <li><a href="/Enquiry/Enquiry/10">Sales and Marketing</a></li>
+                <li><a href="/Enquiry/Enquiry/11">Security</a></li>
+                <li><a href="/Enquiry/Enquiry/12">Tech & Web Solutions</a></li>
+                     <li><a href="/Enquiry/Enquiry/18">Telecom Service</a></li>
+                @*    <li><a href="Consulting.htm">Consulting</a></li>
+                <li><a href="EducationandPlacement.htm">Education &amp; Placement</a></li>
+                <li><a href="http://amritdhot.acndirect.com/default.asp"><strong>Essential Home Services</strong></a></li>
+                <li><a href="Financial.htm">Financial</a></li>
+                <li><a href="Media.htm">Media</a></li>
+                <li><a href="RealEstate.htm">Real Estate</a></li>
+                <li><a href="Sales&Marketing.htm">Sales and Marketing</a></li>
+                <li><a href="Security.htm">Security</a></li>
+                <li><a href="Web.htm">Web Solutions</a></li>*@
+            </ul>
+        </div>
+        <div class="enquiry">
+            <div class="enquiry_box">
+
+                <form method="post" action="/enquiry/enquirybottom" id="name" enctype="multipart/form-data">
+                <div class="aspNetHidden">
+                    <input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMzI3MzEzMjQ0D2QWAmYPZBYCAgcPFgIeB2VuY3R5cGUFE211bHRpcGFydC9mb3JtLWRhdGFkZJqYw2aeNk137WfJ6EjtXyY8GHmm8+Dg8MHjj+BklXPh"
+                        type="hidden">
+                </div>
+                <h1>
+                    &nbsp;&nbsp;&nbsp;&nbsp;ENQUIRY FORM</h1>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                        <tr>
+                            <td align="right" width="110">
+                                <p>
+                                    Name:</p>
+                            </td>
+                            <td align="left" width="100">
+                                <input name="name" class="fname" type="text">
+                            </td>
+                            <td id="n1" align="left">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <p>
+                                    Email:</p>
+                            </td>
+                            <td align="left">
+                                <input name="email" class="email" type="text">
+                            </td>
+                            <td id="n2" align="left">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <p>
+                                    Contact No:</p>
+                            </td>
+                            <td align="left">
+                                <input name="contact" class="contact" type="text">
+                            </td>
+                            <td id="n3" align="left">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <p>
+                                    Purpose:</p>
+                            </td>
+                            <td align="left">
+                                <input name="prps" class="purpose" type="text">
+                            </td>
+                            <td id="n4" align="left">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <input name="ctl00$FileUpload10" id="FileUpload10" class="multi" accept="png|jpg|gif"
+                                    type="file">
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                <input style="background-image: url(/images/button.jpg); border: none; width: 67px;
+                                    height: 28px; margin: 5px 0 0 140px; cursor: pointer" name="" value="" type="submit">
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </form>
+
+            </div>
+            <div class="enquiry_ad">
+            </div>
+        </div>
+    </div>
+</div>

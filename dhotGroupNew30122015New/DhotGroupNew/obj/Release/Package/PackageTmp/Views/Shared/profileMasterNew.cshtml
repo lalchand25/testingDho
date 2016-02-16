@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+
+
+    <link href="../../Content/dhot_group_style.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/homepage-css.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/jawdropper_slider.css" rel="stylesheet" type="text/css" />
+    <script src="../../js/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="../../js/jawdropper_slider.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <div class="top_line">
+    </div>
+    <div class="top_line">
+    </div>
+    <div class="main_header">
+        <div class="header">
+            <div class="logo_left">
+                <img src="/uploads/@Session["logohome"] " width="153" height="123" />
+            </div>
+            <div class="login_button">
+                <a href="/login/logon">
+                    <img src="../../images/login_button.png" /></a>
+            </div>
+            <div class="logo_right">
+                <h2>
+                    @Html.Raw(Session["HomeName1"])
+                </h2>
+                <h3>
+                    @Html.Raw(@Session["HomeName2"])
+                </h3>
+
+            </div>
+            <div class="follow">
+                <img src="../../images/follow-us.png" border="0" usemap="#Map" />
+                <map name="Map" id="Map">
+                    <area shape="rect" coords="5,6,34,32" href="#" />
+                    <area shape="rect" coords="43,6,71,34" href="#" />
+                    <area shape="rect" coords="84,5,108,32" href="#" />
+                    <area shape="rect" coords="119,4,149,30" href="#" />
+                    <area shape="rect" coords="158,4,189,32" href="#" />
+                </map>
+            </div>
+        </div>
+    </div>
+
+    <div class="main_menu">
+        <div class="menu">
+            <div id="btns">
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/profile/profile">Profile</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main_container">
+        <div class="container">
+            <div id="box4">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="/pages/index">Application Pages</a></li>
+                    <li><a href="/Images1/index">Banner Images Size 997x350 </a></li>
+                    <li><a href="/ImagesHome/index">Logo Image Size 164x118</a></li>
+                    <li><a href="/Enquiry/EnquiryList/">Enquiry List</a></li>
+                    <li><a href="/HomePageService/Index/">Home Page Services</a></li>
+                    <li><a href="/Login/logoff/">Log Off</a></li>
+                </ul>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+
+
+            @RenderBody()
+        </div>
+    </div>
+
+
+    <div class="main_footer">
+        <div class="footer">
+            <p>
+                Copyright@www.dhotgroup.com | Website Design by - www.gaganz.com
+            </p>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="plugingaganzModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="plugingaganzModelStoreContainer">
+          <EntitySet Name="tb_ContactUs" EntityType="plugingaganzModel.Store.tb_ContactUs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_ContactUsDhot" EntityType="plugingaganzModel.Store.tb_ContactUsDhot" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_emailsDescription" EntityType="plugingaganzModel.Store.tb_emailsDescription" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_EnquiryDhot" EntityType="plugingaganzModel.Store.tb_EnquiryDhot" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_HomePageServicesDhot" EntityType="plugingaganzModel.Store.tb_HomePageServicesDhot" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_ImagesDhot" EntityType="plugingaganzModel.Store.tb_ImagesDhot" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_ImagesHomeDhot" EntityType="plugingaganzModel.Store.tb_ImagesHomeDhot" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_PageDescription" EntityType="plugingaganzModel.Store.tb_PageDescription" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_UserHistory" EntityType="plugingaganzModel.Store.tb_UserHistory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_UserMaster" EntityType="plugingaganzModel.Store.tb_UserMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_UserMasterDhot" EntityType="plugingaganzModel.Store.tb_UserMasterDhot" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tb_UserTracking" EntityType="plugingaganzModel.Store.tb_UserTracking" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="tb_ContactUs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmailId" Type="varchar" MaxLength="50" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="Location" Type="varchar" MaxLength="50" />
+          <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+          <Property Name="Comments" Type="varchar(max)" />
+          <Property Name="SystemDate" Type="datetime" />
+          <Property Name="Company" Type="varchar" MaxLength="100" />
+          <Property Name="UserStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="tb_ContactUsDhot">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmailId" Type="varchar" MaxLength="50" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="Location" Type="varchar" MaxLength="50" />
+          <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+          <Property Name="Comments" Type="varchar(max)" />
+          <Property Name="SystemDate" Type="datetime" />
+          <Property Name="Company" Type="varchar" MaxLength="100" />
+          <Property Name="UserStatus" Type="bit" />
+          <Property Name="EnquiryType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_emailsDescription">
+          <Key>
+            <PropertyRef Name="Autoid" />
+          </Key>
+          <Property Name="Autoid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmailSubject" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="EmailModule " Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="SetModuleID" Type="int" />
+          <Property Name="GroupId" Type="int" />
+          <Property Name="Remarks" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+          <Property Name="CreationDate" Type="datetime" />
+          <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+          <Property Name="ModificationDate" Type="datetime" />
+          <Property Name="DeleteStatus" Type="varchar" MaxLength="1" />
+          <Property Name="DeletedBy" Type="varchar" MaxLength="50" />
+          <Property Name="DeletionDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tb_EnquiryDhot">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmailId" Type="varchar" MaxLength="50" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" />
+          <Property Name="Location" Type="varchar" MaxLength="50" />
+          <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+          <Property Name="Comments" Type="varchar(max)" />
+          <Property Name="SystemDate" Type="datetime" />
+          <Property Name="Company" Type="varchar" MaxLength="100" />
+          <Property Name="UserStatus" Type="bit" />
+          <Property Name="EnquiryType" Type="varchar" MaxLength="50" />
+          <Property Name="filepath" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="tb_HomePageServicesDhot">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Heading" Type="varchar" MaxLength="500" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="urllink" Type="varchar" MaxLength="500" />
+          <Property Name="ImagePath" Type="varchar" MaxLength="250" />
+          <Property Name="displayorder" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_ImagesDhot">
+          <Key>
+            <PropertyRef Name="ImageID" />
+          </Key>
+          <Property Name="ImageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ImagePath" Type="varchar" MaxLength="250" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tb_ImagesHomeDhot">
+          <Key>
+            <PropertyRef Name="ImageID" />
+          </Key>
+          <Property Name="ImageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ImagePath" Type="varchar" MaxLength="250" />
+          <Property Name="Name" Type="varchar" MaxLength="100" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="tb_PageDescription">
+          <Key>
+            <PropertyRef Name="Pageid" />
+          </Key>
+          <Property Name="Pageid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PageRefId" Type="int" />
+          <Property Name="PageName" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Title" Type="varchar" MaxLength="50" />
+          <Property Name="SetModuleID" Type="int" />
+        </EntityType>
+        <EntityType Name="tb_UserHistory">
+          <Key>
+            <PropertyRef Name="AutoId" />
+          </Key>
+          <Property Name="AutoId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="IpAddress" Type="varchar" MaxLength="50" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="LoginTime" Type="datetime" />
+          <Property Name="SessionName" Type="varchar" MaxLength="50" />
+          <Property Name="Timeout" Type="datetime" />
+          <Property Name="LogoutStatus" Type="bit" />
+          <Property Name="SystemDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tb_UserMaster">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Picture" Type="varchar" MaxLength="250" />
+          <Property Name="EmailID" Type="varchar" MaxLength="50" />
+          <Property Name="UserPassword" Type="varchar" MaxLength="15" />
+          <Property Name="ConfirmPassword" Type="varchar" MaxLength="15" />
+          <Property Name="FirstName" Type="varchar" MaxLength="25" />
+          <Property Name="MiddleName" Type="varchar" MaxLength="25" />
+          <Property Name="LastName" Type="varchar" MaxLength="25" />
+          <Property Name="ProfileName" Type="varchar" MaxLength="50" />
+          <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+          <Property Name="CompanyID" Type="int" />
+          <Property Name="Groupid" Type="int" />
+          <Property Name="UserMainCateID" Type="int" />
+          <Property Name="UserCateID" Type="int" />
+          <Property Name="ConfirmID" Type="bit" />
+          <Property Name="ConfirmDate" Type="datetime" />
+          <Property Name="Terms" Type="bit" />
+          <Property Name="IpAddress" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="LastLogin" Type="datetime" />
+          <Property Name="activeStatus" Type="bit" />
+          <Property Name="RegisterName" Type="varchar" MaxLength="500" />
+          <Property Name="ClassID" Type="int" />
+          <Property Name="ClassName" Type="varchar" MaxLength="50" />
+          <Property Name="SectionID" Type="int" />
+          <Property Name="SectionName" Type="varchar" MaxLength="50" />
+          <Property Name="ClassAssignedID" Type="int" />
+          <Property Name="ClassAssignedName" Type="varchar" MaxLength="50" />
+          <Property Name="SectionAssignedID" Type="int" />
+          <Property Name="SectionAssignedName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_UserMasterDhot">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Picture" Type="varchar" MaxLength="250" />
+          <Property Name="EmailID" Type="varchar" MaxLength="50" />
+          <Property Name="UserPassword" Type="varchar" MaxLength="15" />
+          <Property Name="ConfirmPassword" Type="varchar" MaxLength="15" />
+          <Property Name="FirstName" Type="varchar" MaxLength="25" />
+          <Property Name="MiddleName" Type="varchar" MaxLength="25" />
+          <Property Name="LastName" Type="varchar" MaxLength="25" />
+          <Property Name="ProfileName" Type="varchar" MaxLength="50" />
+          <Property Name="ContactNo" Type="varchar" MaxLength="50" />
+          <Property Name="CompanyID" Type="int" />
+          <Property Name="Groupid" Type="int" />
+          <Property Name="UserMainCateID" Type="int" />
+          <Property Name="UserCateID" Type="int" />
+          <Property Name="ConfirmID" Type="bit" />
+          <Property Name="ConfirmDate" Type="datetime" />
+          <Property Name="Terms" Type="bit" />
+          <Property Name="IpAddress" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="LastLogin" Type="datetime" />
+          <Property Name="activeStatus" Type="bit" />
+          <Property Name="RegisterName" Type="varchar" MaxLength="500" />
+          <Property Name="ClassID" Type="int" />
+          <Property Name="ClassName" Type="varchar" MaxLength="50" />
+          <Property Name="SectionID" Type="int" />
+          <Property Name="SectionName" Type="varchar" MaxLength="50" />
+          <Property Name="ClassAssignedID" Type="int" />
+          <Property Name="ClassAssignedName" Type="varchar" MaxLength="50" />
+          <Property Name="SectionAssignedID" Type="int" />
+          <Property Name="SectionAssignedName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_UserTracking">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Name="AutoID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Userid" Type="int" />
+          <Property Name="IPaddress" Type="varchar" MaxLength="50" />
+          <Property Name="Pagename" Type="varchar" MaxLength="250" />
+          <Property Name="VisitDate" Type="datetime" />
+          <Property Name="Status" Type="varchar" MaxLength="1" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="plugingaganzModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="plugingaganzEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_UserMasterDhot" EntityType="plugingaganzModel.tb_UserMasterDhot" />
+          <EntitySet Name="tb_emailsDescription" EntityType="plugingaganzModel.tb_emailsDescription" />
+          <EntitySet Name="tb_EnquiryDhot" EntityType="plugingaganzModel.tb_EnquiryDhot" />
+          <EntitySet Name="tb_ImagesDhot" EntityType="plugingaganzModel.tb_ImagesDhot" />
+          <EntitySet Name="tb_ImagesHomeDhot" EntityType="plugingaganzModel.tb_ImagesHomeDhot" />
+          <EntitySet Name="tb_PageDescription" EntityType="plugingaganzModel.tb_PageDescription" />
+          <EntitySet Name="tb_UserHistory" EntityType="plugingaganzModel.tb_UserHistory" />
+          <EntitySet Name="tb_UserMaster" EntityType="plugingaganzModel.tb_UserMaster" />
+          <EntitySet Name="tb_UserTracking" EntityType="plugingaganzModel.tb_UserTracking" />
+          <EntitySet Name="tb_ContactUs" EntityType="plugingaganzModel.tb_ContactUs" />
+          <EntitySet Name="tb_ContactUsDhot" EntityType="plugingaganzModel.tb_ContactUsDhot" />
+          <EntitySet Name="tb_HomePageServicesDhot" EntityType="plugingaganzModel.tb_HomePageServicesDhot" />
+        </EntityContainer>
+        <EntityType Name="tb_UserMasterDhot">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Picture" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="EmailID" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UserPassword" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="ConfirmPassword" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="FirstName" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="ProfileName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ContactNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CompanyID" Type="Int32" />
+          <Property Name="Groupid" Type="Int32" />
+          <Property Name="UserMainCateID" Type="Int32" />
+          <Property Name="UserCateID" Type="Int32" />
+          <Property Name="ConfirmID" Type="Boolean" />
+          <Property Name="ConfirmDate" Type="DateTime" Precision="3" />
+          <Property Name="Terms" Type="Boolean" />
+          <Property Name="IpAddress" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastLogin" Type="DateTime" Precision="3" />
+          <Property Name="activeStatus" Type="Boolean" />
+          <Property Name="RegisterName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="ClassID" Type="Int32" />
+          <Property Name="ClassName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SectionID" Type="Int32" />
+          <Property Name="SectionName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ClassAssignedID" Type="Int32" />
+          <Property Name="ClassAssignedName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SectionAssignedID" Type="Int32" />
+          <Property Name="SectionAssignedName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tb_emailsDescription">
+          <Key>
+            <PropertyRef Name="Autoid" />
+          </Key>
+          <Property Type="Int32" Name="Autoid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EmailSubject" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EmailModule_" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SetModuleID" />
+          <Property Type="Int32" Name="GroupId" />
+          <Property Type="String" Name="Remarks" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CreatedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreationDate" Precision="3" />
+          <Property Type="String" Name="ModifiedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ModificationDate" Precision="3" />
+          <Property Type="String" Name="DeleteStatus" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DeletedBy" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="DeletionDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="tb_EnquiryDhot">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EmailId" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Location" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ContactNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Comments" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SystemDate" Precision="3" />
+          <Property Type="String" Name="Company" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="UserStatus" />
+          <Property Type="String" Name="EnquiryType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="filepath" MaxLength="250" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_ImagesDhot">
+          <Key>
+            <PropertyRef Name="ImageID" />
+          </Key>
+          <Property Type="Int32" Name="ImageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ImagePath" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_ImagesHomeDhot">
+          <Key>
+            <PropertyRef Name="ImageID" />
+          </Key>
+          <Property Type="Int32" Name="ImageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ImagePath" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_PageDescription">
+          <Key>
+            <PropertyRef Name="Pageid" />
+          </Key>
+          <Property Type="Int32" Name="Pageid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PageRefId" />
+          <Property Type="String" Name="PageName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Title" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SetModuleID" />
+        </EntityType>
+        <EntityType Name="tb_UserHistory">
+          <Key>
+            <PropertyRef Name="AutoId" />
+          </Key>
+          <Property Type="Int32" Name="AutoId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="TimeStamp" Precision="3" />
+          <Property Type="String" Name="IpAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="UserID" />
+          <Property Type="DateTime" Name="LoginTime" Precision="3" />
+          <Property Type="String" Name="SessionName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Timeout" Precision="3" />
+          <Property Type="Boolean" Name="LogoutStatus" />
+          <Property Type="DateTime" Name="SystemDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="tb_UserMaster">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Type="Int32" Name="UserID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Picture" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EmailID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="UserPassword" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ConfirmPassword" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FirstName" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MiddleName" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ProfileName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ContactNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CompanyID" />
+          <Property Type="Int32" Name="Groupid" />
+          <Property Type="Int32" Name="UserMainCateID" />
+          <Property Type="Int32" Name="UserCateID" />
+          <Property Type="Boolean" Name="ConfirmID" />
+          <Property Type="DateTime" Name="ConfirmDate" Precision="3" />
+          <Property Type="Boolean" Name="Terms" />
+          <Property Type="String" Name="IpAddress" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Precision="3" />
+          <Property Type="DateTime" Name="ModifiedDate" Precision="3" />
+          <Property Type="DateTime" Name="LastLogin" Precision="3" />
+          <Property Type="Boolean" Name="activeStatus" />
+          <Property Type="String" Name="RegisterName" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ClassID" />
+          <Property Type="String" Name="ClassName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SectionID" />
+          <Property Type="String" Name="SectionName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ClassAssignedID" />
+          <Property Type="String" Name="ClassAssignedName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SectionAssignedID" />
+          <Property Type="String" Name="SectionAssignedName" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_UserTracking">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Type="Int32" Name="AutoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Userid" />
+          <Property Type="String" Name="IPaddress" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pagename" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="VisitDate" Precision="3" />
+          <Property Type="String" Name="Status" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_ContactUs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EmailId" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Location" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ContactNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Comments" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SystemDate" Precision="3" />
+          <Property Type="String" Name="Company" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="UserStatus" />
+        </EntityType>
+        <EntityType Name="tb_ContactUsDhot">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="EmailId" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Location" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ContactNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Comments" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SystemDate" Precision="3" />
+          <Property Type="String" Name="Company" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="UserStatus" />
+          <Property Type="String" Name="EnquiryType" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_HomePageServicesDhot">
+          <Key>
+            <PropertyRef Name="AutoID" />
+          </Key>
+          <Property Type="Int32" Name="AutoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Heading" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="urllink" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ImagePath" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="displayorder" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="plugingaganzModelStoreContainer" CdmEntityContainer="plugingaganzEntities">
+          <EntitySetMapping Name="tb_UserMasterDhot">
+            <EntityTypeMapping TypeName="plugingaganzModel.tb_UserMasterDhot">
+              <MappingFragment StoreEntitySet="tb_UserMasterDhot">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="ConfirmPassword" ColumnName="ConfirmPassword" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="ProfileName" ColumnName="ProfileName" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="Groupid" ColumnName="Groupid" />
+                <ScalarProperty Name="UserMainCateID" ColumnName="UserMainCateID" />
+                <ScalarProperty Name="UserCateID" ColumnName="UserCateID" />
+                <ScalarProperty Name="ConfirmID" ColumnName="ConfirmID" />
+                <ScalarProperty Name="ConfirmDate" ColumnName="ConfirmDate" />
+                <ScalarProperty Name="Terms" ColumnName="Terms" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+                <ScalarProperty Name="activeStatus" ColumnName="activeStatus" />
+                <ScalarProperty Name="RegisterName" ColumnName="RegisterName" />
+                <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+                <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+                <ScalarProperty Name="ClassAssignedID" ColumnName="ClassAssignedID" />
+                <ScalarProperty Name="ClassAssignedName" ColumnName="ClassAssignedName" />
+                <ScalarProperty Name="SectionAssignedID" ColumnName="SectionAssignedID" />
+                <ScalarProperty Name="SectionAssignedName" ColumnName="SectionAssignedName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_emailsDescription">
+            <EntityTypeMapping TypeName="plugingaganzModel.tb_emailsDescription">
+              <MappingFragment StoreEntitySet="tb_emailsDescription">
+                <ScalarProperty Name="DeletionDate" ColumnName="DeletionDate" />
+                <ScalarProperty Name="DeletedBy" ColumnName="DeletedBy" />
+                <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+                <ScalarProperty Name="ModificationDate" ColumnName="ModificationDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="SetModuleID" ColumnName="SetModuleID" />
+                <ScalarProperty Name="EmailModule_" ColumnName="EmailModule " />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="EmailSubject" ColumnName="EmailSubject" />
+                <ScalarProperty Name="Autoid" ColumnName="Autoid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_EnquiryDhot">
+            <EntityTypeMapping TypeName="plugingaganzModel.tb_EnquiryDhot">
+              <MappingFragment StoreEntitySet="tb_EnquiryDhot">
+                <ScalarProperty Name="filepath" ColumnName="filepath" />
+                <ScalarProperty Name="EnquiryType" ColumnName="EnquiryType" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="SystemDate" ColumnName="SystemDate" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_ImagesDhot">
+            <EntityTypeMapping TypeName="plugingaganzModel.tb_ImagesDhot">
+              <MappingFragment StoreEntitySet="tb_ImagesDhot">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_ImagesHomeDhot">
+            <EntityTypeMapping TypeName="plugingaganzModel.tb_ImagesHomeDhot">
+              <MappingFragment StoreEntitySet="tb_ImagesHomeDhot">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="ImageID" ColumnName="ImageID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_PageDescription">
+            <EntityTypeMapping TypeName="plugingaganzModel.tb_PageDescription">
+              <MappingFragment StoreEntitySet="tb_PageDescription">
+                <ScalarProperty Name="SetModuleID" ColumnName="SetModuleID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="PageName" ColumnName="PageName" />
+                <ScalarProperty Name="PageRefId" ColumnName="PageRefId" />
+                <ScalarProperty Name="Pageid" ColumnName="Pageid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_UserHistory">
+            <EntityTypeMapping TypeName="plugingaganzModel.tb_UserHistory">
+              <MappingFragment StoreEntitySet="tb_UserHistory">
+                <ScalarProperty Name="SystemDate" ColumnName="SystemDate" />
+                <ScalarProperty Name="LogoutStatus" ColumnName="LogoutStatus" />
+                <ScalarProperty Name="Timeout" ColumnName="Timeout" />
+                <ScalarProperty Name="SessionName" ColumnName="SessionName" />
+                <ScalarProperty Name="LoginTime" ColumnName="LoginTime" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_UserMaster">
+            <EntityTypeMapping TypeName="plugingaganzModel.tb_UserMaster">
+              <MappingFragment StoreEntitySet="tb_UserMaster">
+                <ScalarProperty Name="SectionAssignedName" ColumnName="SectionAssignedName" />
+                <ScalarProperty Name="SectionAssignedID" ColumnName="SectionAssignedID" />
+                <ScalarProperty Name="ClassAssignedName" ColumnName="ClassAssignedName" />
+                <ScalarProperty Name="ClassAssignedID" ColumnName="ClassAssignedID" />
+                <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+                <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+                <ScalarProperty Name="RegisterName" ColumnName="RegisterName" />
+                <ScalarProperty Name="activeStatus" ColumnName="activeStatus" />
+                <ScalarProperty Name="LastLogin" ColumnName="LastLogin" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="Terms" ColumnName="Terms" />
+                <ScalarProperty Name="ConfirmDate" ColumnName="ConfirmDate" />
+                <ScalarProperty Name="ConfirmID" ColumnName="ConfirmID" />
+                <ScalarProperty Name="UserCateID" ColumnName="UserCateID" />
+                <ScalarProperty Name="UserMainCateID" ColumnName="UserMainCateID" />
+                <ScalarProperty Name="Groupid" ColumnName="Groupid" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="ProfileName" ColumnName="ProfileName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="ConfirmPassword" ColumnName="ConfirmPassword" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_UserTracking">
+            <EntityTypeMapping TypeName="plugingaganzModel.tb_UserTracking">
+              <MappingFragment StoreEntitySet="tb_UserTracking">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+                <ScalarProperty Name="Pagename" ColumnName="Pagename" />
+                <ScalarProperty Name="IPaddress" ColumnName="IPaddress" />
+                <ScalarProperty Name="Userid" ColumnName="Userid" />
+                <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_ContactUs">
+            <EntityTypeMapping TypeName="plugingaganzModel.tb_ContactUs">
+              <MappingFragment StoreEntitySet="tb_ContactUs">
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="SystemDate" ColumnName="SystemDate" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_ContactUsDhot">
+            <EntityTypeMapping TypeName="plugingaganzModel.tb_ContactUsDhot">
+              <MappingFragment StoreEntitySet="tb_ContactUsDhot">
+                <ScalarProperty Name="EnquiryType" ColumnName="EnquiryType" />
+                <ScalarProperty Name="UserStatus" ColumnName="UserStatus" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="SystemDate" ColumnName="SystemDate" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_HomePageServicesDhot">
+            <EntityTypeMapping TypeName="plugingaganzModel.tb_HomePageServicesDhot">
+              <MappingFragment StoreEntitySet="tb_HomePageServicesDhot">
+                <ScalarProperty Name="displayorder" ColumnName="displayorder" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="urllink" ColumnName="urllink" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Heading" ColumnName="Heading" />
+                <ScalarProperty Name="AutoID" ColumnName="AutoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="DhotData" ZoomLevel="63">
+        <EntityTypeShape EntityType="plugingaganzModel.tb_UserMasterDhot" Width="1.5" PointX="0.75" PointY="0.75" Height="6.9801236979166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="plugingaganzModel.tb_emailsDescription" Width="1.5" PointX="3.75" PointY="0.75" Height="3.7109993489583326" />
+        <EntityTypeShape EntityType="plugingaganzModel.tb_EnquiryDhot" Width="1.5" PointX="5.75" PointY="0.75" Height="3.3263964843749996" />
+        <EntityTypeShape EntityType="plugingaganzModel.tb_ImagesDhot" Width="1.5" PointX="3.75" PointY="5.75" Height="1.7879850260416657" />
+        <EntityTypeShape EntityType="plugingaganzModel.tb_ImagesHomeDhot" Width="1.5" PointX="5.75" PointY="5.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="plugingaganzModel.tb_PageDescription" Width="1.5" PointX="7.75" PointY="0.75" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="plugingaganzModel.tb_UserHistory" Width="1.5" PointX="7.75" PointY="3.75" Height="2.7494921874999996" />
+        <EntityTypeShape EntityType="plugingaganzModel.tb_UserMaster" Width="1.5" PointX="7.75" PointY="7.75" Height="6.9801236979166674" />
+        <EntityTypeShape EntityType="plugingaganzModel.tb_UserTracking" Width="1.5" PointX="0.75" PointY="8.75" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="plugingaganzModel.tb_ContactUs" Width="1.5" PointX="3.375" PointY="8.75" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="plugingaganzModel.tb_ContactUsDhot" Width="1.5" PointX="10.375" PointY="0.75" Height="3.1340950520833317" />
+        <EntityTypeShape EntityType="plugingaganzModel.tb_HomePageServicesDhot" Width="1.5" PointX="10.80821552072103" PointY="27.87345939682492" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
